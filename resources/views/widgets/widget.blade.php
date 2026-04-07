@@ -120,9 +120,6 @@
             formData.append('files[]', file);
         });
 
-        console.log(form);
-        console.log(formData);
-
         try {
             const response = await fetch('/api/tickets', {
                 method: 'POST',

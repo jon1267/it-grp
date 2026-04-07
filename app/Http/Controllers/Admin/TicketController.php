@@ -30,7 +30,7 @@ class TicketController extends Controller
     {
         $ticket->load(['customer', 'media']);
 
-        return view('admin.tickets.show', compact('ticket'));
+        return view('admin.tickets.show', ['ticket' => $ticket]);
     }
 
     public function updateStatus(Request $request, Ticket $ticket)

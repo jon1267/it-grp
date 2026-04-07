@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Api;
 
 use App\Enums\TicketStatus;
+use App\Rules\E164Phone;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
@@ -26,7 +27,7 @@ class StoreTicketRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
-            'phone' => ['required', 'string', 'max:20'],
+            'phone' => ['required', 'string', new E164Phone()],
             'email' => ['required', 'email', 'max:255'],
             'title' => ['required', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
