@@ -42,7 +42,7 @@ https://your-site.local/api/tickets/statistics
     style="border:none;" 
   ></iframe>
 
-  в html коде страницы внутри тега <body>  
+  в html коде нужной вам страницы, в любом месте, внутри тега body.
 
 ### Админ панель Мини-CRM
 1) В качестве админ панели (админки) для Мини-CRM использовался Filament v5.<br>
